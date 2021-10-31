@@ -4,8 +4,8 @@ services:
     image: lmmdock/postgres-multi
     container_name: multidb-pg
     environment:
-      POSTGRES_USERS: "multiUser1:developerPass"
-      POSTGRES_DATABASES: "rails_multidb_development:multiUser1"
+      POSTGRES_USERS: "multiUser1:developerPass|multiUser2:adminPass"
+      POSTGRES_DATABASES: "rails_multidb_development:multiUser1|rails_user_development:multiUser2"
     ports:
       - '5432:5432'
     expose:
