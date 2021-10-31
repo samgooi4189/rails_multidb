@@ -1,24 +1,12 @@
-# README
+# Rails multi-db sample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### postgres db
+* go do docker folder
+* run `docker-compose up -d` to get the DB container up
 
-Things you may want to cover:
+### migrations
+* rails db:migrate
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### create model
+`rails g scaffold Employee name:string --database secondary`
+This creates Employee model using secondary DB.
