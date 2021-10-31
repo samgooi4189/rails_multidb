@@ -1,0 +1,2 @@
+class Employee < SecondaryRecord
+end
